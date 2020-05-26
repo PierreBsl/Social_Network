@@ -1,10 +1,10 @@
 <?php
 session_start();
 
+require "includes/functions.php";
 include('filters/auth_filter.php');
-require("config/database.php");
-require("includes/functions.php");
-require('includes/constants.php');
+require("bootstrap/locale.php");
+require('includes/init.php');
 
 
 if(!empty($_GET['id'])){
@@ -13,49 +13,35 @@ if(!empty($_GET['id'])){
 
 	if(!$user){
 		redirect('index.php');
+	} else {
+		$q = $db->prepare("SELECT U.id user_id, U.pseudo, U.email, 
+							      M.id m_id, M.content, M.created_at
+						   FROM users U, microposts M, friends_relationships F
+						   WHERE M.user_id = U.id
+
+						   AND
+
+						   CASE
+								WHEN F.user_id1 = :user_id
+								THEN F.user_id2 = M.user_id
+
+								WHEN F.user_id2 = :user_id
+								THEN F.user_id1 = M.user_id
+						   END
+
+						   AND F.status > 0
+						   ORDER BY M.id DESC");
+
+		$q->execute([
+			'user_id' => $_GET['id']
+		]);
+		
+		$microposts = $q->fetchAll(PDO::FETCH_OBJ);
 	}
 
 } else {
 		redirect('profil.php?id='.get_session('user_id'));
 }
 
-//Si le formulaire a été soumis
-	if(isset($_POST['update'])) {
-
-		//Si tous les champs ont été remplis
-		if(not_empty(['name', 'city', 'country', 'sex', 'bio '])){
-			extract($_POST);
-
-			$q = $db-> prepare('UPDATE users SET name = :name, city = :city, country = :country, sex = :sex, linkedin = :linkedin, github = :github, available_for_working = :available_for_working, bio = :bio WHERE id = :id');
-			$q->execute([
-				'name' => $name,
-				'city' => $city,
-				'country' => $sex,
-				'linkedin' => $linkedin,
-				'github' => $github,
-				'avalaible_for_working' => !empty($available_for_working) ? '1' : '0',
-				'bio' =>$bio,
-				'id' => $id,
-			]);
-
-			$userHasBeenFound = $q->rowCount();
-
-			if($userHasBeenFound){
-
-				$user = $q->fetch(PDO::FETCH_OBJ);
-
-				$_SESSION['user_id'] = $user->id;
-				$_SESSION['pseudo'] = $user->pseudo;
-
-				redirect('profil.php?id='.$user->id);
-			} else {
-				set_flash("Le nom d'utilisateur ou le mot de passe est incorrect. <?php <br></br> Sinon merci de bien vouloir activer votre compte", 'danger');
-				save_input_data();
-			}
-			
-		}
-	} else {
-		clear_input_data();
-	}
 
 require("views/profil.view.php");

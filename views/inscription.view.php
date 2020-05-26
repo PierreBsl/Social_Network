@@ -24,9 +24,10 @@
 			<!-- Email -->
 			<div class="form-group"> 
 				<label class="control-label" for="email">Adresse e-mail :</label>
-				<input type="email" value="<?= get_input('email') ?>" class="form-control" id="email" name="email" required="required"/>
+				<input type="email" value="<?= get_input('email') ?>" class="form-control" id="email" name="email" required="required" aria-describedby="basic-addon2"/>
+				<span class="input-group-addon" id="basic-addon2">@gmail.com</span>
 			</div>
-
+			
 			<!-- Password -->
 			<div class="form-group"> 
 				<label class="control-label" for="password">Mot de passe :</label>
@@ -41,6 +42,11 @@
 
 			<input type="submit" class="btn btn-primary" value="Inscription" name="register">
 
-			<br></br>
+		</form>
+	</div>
+</div>
 
+			</br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="src/app.js"></script>
 		<?php include('partials/_footer.php');?>
