@@ -1,0 +1,128 @@
+nav{
+	cursor: pointer;
+}
+
+.logomain{
+	width: 6%;
+	position: sticky;
+	top: 60px;
+}
+
+#main-content{
+	margin-top: -60px;
+}
+
+/*pop-up*/
+a.onclick {
+	cursor: pointer;
+}
+
+#modal {
+	height: 300px;
+	width: 30%;
+	margin-left: 60px;
+	text-align: center;
+	background-color: #101010;
+	opacity: 0.9;
+	position: absolute;
+	top: -300px;
+	left: 30%;
+	transition: 1s;
+}
+#modal h2 {
+	padding-top: 55px;
+	color: white;
+}
+
+.connexion-label{
+ 	width: 80%;
+}
+
+.connexion-input{
+ 	width: 80%;
+}
+
+label {
+	color: white;
+}
+
+/*slider*/
+.slider{
+	width: 1000px;
+	overflow: hidden;
+	margin: 50px auto;
+}
+.slides{
+	width: calc(1000px * 4);
+	animation: glisse 15s infinite;
+}
+.slide{
+	float: left;
+}
+
+@keyframes glisse {
+	0%{
+		transform: translateX(0);
+	}
+	12.5%{
+		transform: translateX(0);
+	}
+	25%{
+		transform: translateX(-1000px);
+	}
+	37.5%{
+		transform: translateX(-1000px);
+	}
+	50%{
+		transform: translateX(-2000px);
+	}
+	62.5%{
+		transform: translateX(-2000px);
+	}
+	75%{
+		transform: translateX(-3000px);
+	}
+	87.5%{
+		transform: translateX(-3000px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+/*contact*/
+
+#equipe {
+	text-align: center;
+}
+.collonnes{
+	text-align: center;
+	margin-bottom: 15%;
+}
+
+h2 {
+	font-weight: bold;
+}
+
+.separator {
+	height: 3px;
+	width: 5%;
+	border: none;
+	box-shadow: none;
+	background-color: #6D6D6D;
+}
+
+
+/*footer*/
+footer{
+	color: #6D6D6D;
+	text-align: center;
+}
+
+.connexion-label{
+ 	width: 80%;
+}
+
+.connexion-input{
+ 	width: 80%;
+}

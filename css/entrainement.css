@@ -1,0 +1,109 @@
+nav{
+	cursor: pointer;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*entrainement*/
+
+h1.choose{
+	text-align: center;
+	font-weight: bold;
+	margin: 0;
+	font-size: 36px;
+}
+
+i.color{
+	color: black;
+}
+
+
+/*1er bloc*/
+img.beg{
+	width: 50%;
+	height:76.5%;
+	position: absolute;
+	object-fit: cover;
+	float: left;
+	margin-left: 0px;
+	margin-top: 15px;
+}
+
+.container1 a:hover img{
+	opacity: .6;
+	transition: .5s;
+}
+
+h1.beg{
+	font-weight: bold;
+	color: white;
+	position: relative;
+	margin-left: 270px;
+	margin-top: 150px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	float: left;
+	text-shadow: 1px 1px 20px #000000;
+}
+button.btn1{
+	top: 400px;
+	left: 175px;
+	width: 51px;
+	height: 51px;
+	position: absolute;
+	margin-left: calc(50% - 490px);
+}
+
+/*2eme bloc*/
+img.perf{
+	width: 50%;
+	height: 76.5%;
+	margin-top: 15px;
+	position: absolute;
+	object-fit: cover;
+	float: left;
+	margin-left: 165px;
+}
+
+.container2 a:hover img{
+	opacity: .6;
+	transition: .5s;
+}
+
+h1.perf{
+	font-weight: bold;
+	color: white;
+	position: relative;
+	margin-right: 160px;
+	margin-top: 150px;;
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	float: right;
+	text-shadow: 1px 1px 20px #000000;
+	cursor: pointer;
+}
+
+button.btn2 {
+	top: 400px;
+	left: 800px;
+	width: 51px;
+	height: 51px;
+	position: absolute;
+	margin-left: calc(50% - 490px);
+}
+
+footer{
+	margin-top: 38%;
+}
+
+/*left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: hidden;
+	transform: none;
+	clip: auto;
+	width: 300px;
+	height: 200px;*/
