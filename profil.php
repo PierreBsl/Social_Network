@@ -26,14 +26,14 @@ if(!empty($_GET['id'])){
 		if(not_empty(['name', 'city', 'country', 'sex', 'bio '])){
 			extract($_POST);
 
-			$q = $db-> prepare('UPDATE users SET name = :name, city = :city, country = :country, sex = :sex, twitter = :twitter, github = :github, available_for_trainning = :available_for_trainning, bio = :bio WHERE id = :id');
+			$q = $db-> prepare('UPDATE users SET name = :name, city = :city, country = :country, sex = :sex, linkedin = :linkedin, github = :github, available_for_working = :available_for_working, bio = :bio WHERE id = :id');
 			$q->execute([
 				'name' => $name,
 				'city' => $city,
 				'country' => $sex,
-				'facebook' => $facebook,
-				'spotify' => $spotify,
-				'avalaible_for_training' => !empty($available_for_trainning) ? '1' : '0',
+				'linkedin' => $linkedin,
+				'github' => $github,
+				'avalaible_for_working' => !empty($available_for_working) ? '1' : '0',
 				'bio' =>$bio,
 				'id' => $id,
 			]);

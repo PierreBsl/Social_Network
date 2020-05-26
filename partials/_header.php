@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Réseau social pour sportif">
-    <meta name="author" content="ISN">
+    <meta name="description" content="Réseau Social pour l'ISEN">
+    <meta name="author" content="Pierre Eloi et Quentin">
     
 
     <title>
