@@ -83,23 +83,23 @@
 				    		<div class="row">
 				    			<div class="col-md-6">
 				    				<div class="form-group">
-				    					<label for="facebook">Facebook</label>
-				    					<input type="text" name="facebook" id="facebook" class="form-control"/>
+				    					<label for="github">LinkedIn</label>
+				    					<input type="text" name="linkedin" id="linkedin" class="form-control"/>
 				    				</div>
 				    			</div>
 				    			<div class="col-md-6">
 				    				<div class="form-group">
-				    					<label for="spotify">Spotify</label>
-				    					<input type="text" name="spotify" id="spotify" class="form-control"/>
+				    					<label for="github">Github</label>
+				    					<input type="text" name="github" id="github" class="form-control"/>
 				    				</div>
 				    			</div>
 				    		</div>
 				    		<div class="row">
 				    			<div class="col-md-12">
 				    				<div class="form-group">
-				    					<label for="available_for_training">
-				    					<input type="checkbox" name="available_for_training" id="available_for_training"/>
-				    					Disponible pour entraînement
+				    					<label for="available_for_working">
+				    					<input type="checkbox" name="available_for_working" id="available_for_working"/>
+				    					Disponible pour Travailler
 				    				</label>
 				    				</div>
 				    			</div>
@@ -107,7 +107,7 @@
 				    				<div class="form-group">
 				    					<label for="bio">Biographie<span class=""text_danger">*</span></label>
 				    					<textarea name="bio" id="bio" cols="30" required="required" rows="10" class="form-control"
-				    							  placeholder="Je suis amoureux du sport ..."></textarea>
+				    							  placeholder="Votre Biographie ..."></textarea>
 				    				</div>
 				    			</div>
 				    		</div>
